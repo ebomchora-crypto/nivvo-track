@@ -1,0 +1,7 @@
+{"_nota":"PROVISÓRIO: substituir por payload real da Kiwify",
+ "order_id":"ord-123","order_status":"paid","payment_method":"pix",
+ "approved_date":"2026-11-20 14:30","created_at":"2026-11-20 14:28",
+ "Product":{"product_id":"prod-1","product_name":"Curso X"},
+ "Customer":{"full_name":"Fulano","email":"Fulano@Example.com"},
+ "Commissions":{"charge_amount":19700,"my_commission":17000,"currency":"BRL"},
+ "TrackingParameters":{"src":null,"sck":null,"utm_source":"fb","utm_medium":"Conjunto A|222","utm_campaign":"Camp 1|111","utm_content":"Anuncio 3|333","utm_term":null}}
