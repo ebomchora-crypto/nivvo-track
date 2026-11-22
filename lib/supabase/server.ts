@@ -1,0 +1,13 @@
+import { createServerClient } from "@supabase/ssr";
+import { cookies } from "next/headers";
+
+/** Cliente com a sessão do usuário (RLS ativa). A anon key é pública por design. */
+export function supabaseServer() {
+  const store = cookies();
+  return createServerClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!, {
+    cookies: {
+      getAll: () => store.getAll(),
+      setAll: (list) => { try { list.forEach((c) => store.set(c.name, c.value, c.options)); } catch { /* server component */ } },
+    },
+  });
+}
